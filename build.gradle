@@ -4,7 +4,7 @@ plugins {
     id 'java'
     id 'com.google.cloud.tools.jib' version '3.1.1'
 }
-jib.to.image = 'gcr.io/${PROJECT_ID}/gs-spring-boot:v1'
+jib.to.image = 'gcr.io/' + System.getenv('PROJECT_ID') + '/gs-spring-boot:v1'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
